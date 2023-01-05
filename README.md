@@ -7,7 +7,7 @@
 
 📄 Link de acesso aos <a href="https://cord-delivery-7eb.notion.site/Testes-Automatizados-de-Software-c30693327c904b3fac64300282715c0b">resumos das aulas</a>. 
 
-🖼 Link de acesso ao <a href="https://jonathanbenedito.github.io/modulo-intermediario-javascript/">deploy</a>.
+🖼 Link de acesso ao <a href="https://jonathanbenedito.github.io/testes-automatizados-jest/">deploy</a>.
 
 ## 📝 Anotações
 
