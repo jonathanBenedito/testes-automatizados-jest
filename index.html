@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Valor Pedidos</title>
+</head>
+<body>
+    <h1>Calcular Valor Pedidos</h1>
+
+    <p>Configura&ccedil;&atilde;o do <code>package.json</code> para que o Jest consiga testar nosso projeto.</p>
+    <pre><code class="language-jsx">{
+      "name": "calcular-valor-pedidos",
+      "version": "1.0.0",
+      "description": "",
+      "main": "calcular-valor-pedido.js",
+      "scripts": {
+        "test": "jest",
+        "watch": "jest --watchAll *.js"
+      },
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "jest": "^29.3.1"
+      }
+    }
+    </code></pre>
+    <p>&Eacute; preciso criar um arquivo com extens&atilde;o <code>.test.js</code> do mesmo nome do arquivo em que a fun&ccedil;&atilde;o est&aacute; definida, para a detec&ccedil;&atilde;o dos testes.</p>
+    <pre><code class="language-jsx">const calcularValorPedido = require('./calcular-valor-pedido');
+    
+    it('n&atilde;o deve cobrar valor de frete quando valor dos produtos for superior a 500', () =&gt; {
+        // AAA - 3 passos de cria&ccedil;&atilde;o de um teste
+        
+        // ARRANGE - ARRUMAR - OBJETO DE TESTE
+        const meuPedido = {
+            itens: [
+                { nome: 'Po&ccedil;&atilde;o de vida', valor: 100 },
+                { nome: 'Espada de prata', valor: 1000 },
+                { nome: 'Entrega', valor: 40, entrega: true }
+            ]
+        }
+        
+        // ACT - A&Ccedil;&Atilde;O - O QUE VAI SER TESTADO
+        const resultado = calcularValorPedido(meuPedido);
+    
+        // ASSERT - ASSER&Ccedil;&Atilde;O - QUAL O RESUTADO ESPERADO
+        expect(resultado).toBe(1100)
+    })
+    </code></pre>
+    <p><code>npm run test</code> &rarr; Inicializar bateria de testes de uma vez.</p>
+    <p><code>npm run watch</code> &rarr; Inicializar bateria de testes de forma constante, o Jest testar&aacute; nosso c&oacute;digo sempre que for alterado.</p>
+
+    <script src="calcular-valor-pedido.js"></script>
+</body>
+</html>
